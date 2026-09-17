@@ -41,25 +41,3 @@ h1 { font-size: 1.5rem; }
 h2 { font-size: 1.1rem; }
 h3 { font-size: 1.05rem; }
 
-/* Override background color */
-:root {
-  --color-neutral: 229, 255, 204;           /* Light mode background */
-  --color-neutral-50: 248, 250, 252;        /* Subtle backgrounds */
-  --color-neutral-900: 0, 51, 0;          /* Dark mode background */
-}
-
-/* Override font/text color */
-body {
-  color: rgb(var(--color-neutral-800));     /* Light mode text */
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    color: rgb(var(--color-neutral-100));   /* Dark mode text */
-  }
-}
-
-/* Or force specific colors regardless of scheme */
-:root {
-  --color-primary-500: 59, 130, 246;        /* Accent color (links, buttons) */
-}
