@@ -19,7 +19,7 @@
   weight = 40
 
 [[main]]
-  name = "Workshop Guide"
+  name = "SOS"
   pageRef = "guide"
   weight = 50
 

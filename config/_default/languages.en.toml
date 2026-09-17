@@ -1,20 +1,20 @@
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "Dr. Reginald Huffington-Smythe III"
+title = "Anna Kleiman"
 
 [params]
   displayName = "English"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
-  description = "Personal academic website of Dr. Reginald Huffington-Smythe III, Professor of Postmodern Semiotics and Amateur Competitive Crossword Solver."
+  description = "Practical Scandologist: Provokes scandals, then writes about them."
 
 [params.author]
-  name = "Dr. Reginald Huffington-Smythe III"
-  email = "r.huffington-smythe@university.edu"
-  headline = "Professor of Postmodern Semiotics | Amateur Competitive Crossword Solver"
-  bio = "I study the semiotic implications of things that mean other things. My current project investigates whether laundry instructions constitute a form of oppressive discourse. I have opinions about Derrida that I will share with you whether you asked or not."
+  name = "Anna Kleiman"
+  email = "annakleiman@gmail.com"
+  headline = "Scanadlogist scholar"
+  bio = "Helm me lord omfg"
   links = [
     { bluesky = "https://bsky.app/profile/yourhandle.bsky.social" },
     { github = "https://github.com/yourusername" },
