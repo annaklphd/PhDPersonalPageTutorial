@@ -1,5 +1,5 @@
 theme = "blowfish"
-baseURL = "https://phdpersonalpagetutorial.netlify.app/"
+baseURL = "annakleiman.com"
 defaultContentLanguage = "en"
 
 enableRobotsTXT = true
