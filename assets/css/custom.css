@@ -41,12 +41,68 @@ h1 { font-size: 1.5rem; }
 h2 { font-size: 1.1rem; }
 h3 { font-size: 1.05rem; }
 
-/* Make the first image on homepage full-width cover style */
-.home-content img:first-of-type {
-  width: 100%;
-  height: auto;
-  max-height: 60vh;
-  object-fit: cover;
-  display: block;
-  margin-bottom: 2rem;
+/* Full-width cover background behind profile header */
+#profile-header {
+  position: relative;
+  isolation: isolate;
+  min-height: 60vh; /* ensures space for the background */
+}
+
+#profile-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/img/cover.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: 0.35;
+}
+
+/* Full-width cover background behind profile header */
+#profile-header {
+  position: relative;
+  isolation: isolate;
+  /* Remove any top padding/margin to sit tight under nav */
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Full-viewport-width background, ends halfway through Rooster */
+#profile-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 280px; /* Adjust: height where background ends (halfway through Rooster) */
+  background-image: url('/img/cover.jpg');
+  background-size: cover;
+  background-position: 60% 38%; /* Adjust vertical position: 0% = top, 50% = center, 100% = bottom */
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+#profile-header header {
+  position: relative;
+  z-index: 1;
+  /* Remove top space so Rooster sits tight under nav */
+  padding-top: 0;
+  margin-top: 0;
+}
+
+/* Ensure the article itself has no top margin/padding */
+#profile-header > header:first-child {
+  padding-top: 0;
+}
+
+/* Remove the spacer div gap under header */
+.min-h-\[148px\] {
+  display: none !important;
+  min-height: 0 !important;
+  height: 0 !important;
 }

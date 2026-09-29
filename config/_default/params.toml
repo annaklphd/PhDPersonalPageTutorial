@@ -6,9 +6,9 @@ enableSearch = true
 enableCodeCopy = true
 
 mainSections = ["research", "publications"]
- 7
+
 [header]
-  ayout = "fixed"
+  layout = "fixed"
 
 [footer]
   showMenu = true
@@ -45,7 +45,7 @@ mainSections = ["research", "publications"]
   filename = "sitemap.xml"
   priority = 0.5
 
-  [author]
+[author]
   name = "Dr. Anna Kleiman"
   headline = "Practicing Scandologist"
   image = "/img/Rooster.png"
