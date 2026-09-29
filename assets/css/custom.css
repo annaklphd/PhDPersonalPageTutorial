@@ -41,3 +41,12 @@ h1 { font-size: 1.5rem; }
 h2 { font-size: 1.1rem; }
 h3 { font-size: 1.05rem; }
 
+/* Make the first image on homepage full-width cover style */
+.home-content img:first-of-type {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 2rem;
+}
