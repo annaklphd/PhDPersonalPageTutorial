@@ -1,0 +1,29 @@
+<div class="flex flex-col items-center text-center space-y-6">
+  <!-- Profile image -->
+  {{ with site.Params.Author.image }}
+    {{ $img := resources.Get . }}
+    {{ if $img }}
+      {{ $final := $img.Fill "200x200" }}
+      <img src="{{ $final.RelPermalink }}" alt="{{ site.Params.Author.name }}" class="rounded-full border-4 border-white dark:border-neutral-800 shadow-lg" width="200" height="200">
+    {{ end }}
+  {{ end }}
+
+  <!-- Name -->
+  <h2 class="text-xl font-bold text-white dark:text-neutral-100 drop-shadow-lg">{{ site.Params.Author.name | default site.Title }}</h2>
+
+  <!-- Subtitle/headline -->
+  {{ with site.Params.Author.headline }}
+    <p class="text-white/90 dark:text-neutral-300 drop-shadow-md max-w-xs">{{ . | markdownify }}</p>
+  {{ end }}
+
+  <!-- Social links -->
+  <div class="flex gap-3">{{ partialCached "author-links.html" . }}</div>
+
+  <!-- Custom links -->
+  <div class="w-full space-y-3 pt-4 border-t border-white/20 dark:border-neutral-700 text-sm text-left">
+    <a href="mailto:your@email.com" class="block text-white/80 dark:text-neutral-300 hover:text-white dark:hover:text-white">📧 your@email.com</a>
+    <a href="https://scholar.google.com" class="block text-white/80 dark:text-neutral-300 hover:text-white dark:hover:text-white" target="_blank">🎓 Google Scholar</a>
+    <a href="https://github.com/yourusername" class="block text-white/80 dark:text-neutral-300 hover:text-white dark:hover:text-white" target="_blank">💻 GitHub</a>
+    <a href="https://linkedin.com/in/yourprofile" class="block text-white/80 dark:text-neutral-300 hover:text-white dark:hover:text-white" target="_blank">💼 LinkedIn</a>
+  </div>
+</div>
