@@ -2,6 +2,8 @@ colorScheme = "forest"
 defaultAppearance = "light"
 autoSwitchAppearance = true
 
+disableTextInHeader = true
+
 enableSearch = true
 enableCodeCopy = true
 
