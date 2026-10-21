@@ -43,8 +43,7 @@
   <section class="prose dark:prose-invert w-full">{{ .Content }}</section>
   <script>
     (function() {
-      const header = document.querySelector('header .fixed.inset-x-0');
-      if (!header) return;
+const header = document.querySelector('.fixed.inset-x-0.z-100');
       const nav = header.querySelector('.relative.m-auto');
       const coverHeight = 280;
       window.addEventListener('scroll', function() {

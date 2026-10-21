@@ -107,7 +107,7 @@ h3 { font-size: 1.05rem; }
   height: 0 !important;
 }
 /* Position header/nav exactly at bottom edge of cover photo (280px) */
-header .fixed.inset-x-0 {
+.fixed.inset-x-0.z-100 {
   position: absolute !important;
   top: 280px !important;  /* matches cover photo height */
   left: 0;
@@ -121,19 +121,19 @@ header .fixed.inset-x-0 {
 }
 
 /* Ensure header content has transparent background until scrolled */
-header .relative.m-auto {
+.fixed.inset-x-0.z-100 .relative.m-auto {
   background: transparent !important;
   backdrop-filter: none !important;
   box-shadow: none !important;
 }
 
 /* Background when scrolled past cover */
-header.scrolled .relative.m-auto {
+.fixed.inset-x-0.z-100.scrolled .relative.m-auto {
   background: rgba(255, 255, 255, 0.95) !important;
   backdrop-filter: blur(20px) !important;
 }
 @media (prefers-color-scheme: dark) {
-  header.scrolled .relative.m-auto {
+  .fixed.inset-x-0.z-100.scrolled .relative.m-auto {
     background: rgba(30, 30, 30, 0.95) !important;
   }
 }
